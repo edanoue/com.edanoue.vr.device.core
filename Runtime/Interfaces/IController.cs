@@ -19,8 +19,6 @@ namespace Edanoue.VR.Device.Core
         // public string PrimaryName { get; }
         public bool IsPressedPrimary { get; }
         public bool IsTouchedPrimary { get; }
-        public event Action<bool> PressedPrimary;
-        public event Action<bool> TouchedPrimary;
 
         /*
         
@@ -66,6 +64,8 @@ namespace Edanoue.VR.Device.Core
         public bool IsPressedStick { get; }
         public bool IsTouchedStick { get; }
         public (float X, float Y) Stick { get; }
+        public event Action<bool> PressedPrimary;
+        public event Action<bool> TouchedPrimary;
         public event Action<bool> TouchedStick;
         public event Action<bool> PressedStick;
         public event Action<float, float> ChangedStick;
