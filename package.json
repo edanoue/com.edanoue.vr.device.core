@@ -1,0 +1,12 @@
+{
+  "name": "com.edanoue.vr.device.core",
+  "displayName": "Edanoue VR Device Core",
+  "version": "0.1.0",
+  "unity": "2021.3",
+  "description": "Edanoue VR device core package.",
+  "author": {
+    "name": "Edanoue, Inc.",
+    "email": "contact@edanoue.com",
+    "url": "https://edanoue.com"
+  }
+}
