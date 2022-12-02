@@ -12,8 +12,9 @@ namespace Edanoue.VR.Device.Core
     {
         /*
         public string ProductName { get; }
-        public ControllerDomain Domain { get; }
         */
+        
+        public ControllerDomain Domain { get; }
 
         // Primary Button (A or X)
         // public string PrimaryName { get; }
