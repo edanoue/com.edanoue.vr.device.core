@@ -2,7 +2,6 @@
 // see: https://scrapbox.io/edanoue/AssemblyInfo.cs
 
 
-
 // -------------------------
 // Define Friend Assembries
 // -------------------------
