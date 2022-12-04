@@ -1,13 +1,23 @@
 namespace Edanoue.VR.Device.Core
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IProvider
     {
-        public string FamilyName { get; }
-        public string ProductName { get; }
-        public string Version { get; }
-
+        /// <summary>
+        ///     Get headset.
+        /// </summary>
         public IHeadset Headset { get; }
+
+        /// <summary>
+        ///     Get left controller.
+        /// </summary>
         public IController LeftController { get; }
+
+        /// <summary>
+        ///     Get right controller.
+        /// </summary>
         public IController RightController { get; }
     }
 }
