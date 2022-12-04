@@ -2,27 +2,24 @@ using System;
 
 namespace Edanoue.VR.Device.Core
 {
-    public enum ControllerDomain
-    {
-        Left,
-        Right
-    }
-
     public interface IController : ITracker
     {
-        /*
-        public string ProductName { get; }
-        */
-
+        /// <summary>
+        /// Gets left or right. 
+        /// </summary>
         public ControllerDomain Domain { get; }
 
-        // Primary Button (A or X)
-        // public string PrimaryName { get; }
+        /// <summary>
+        /// Gets the primary button (A or X) pressed.
+        /// </summary>
         public bool IsPressedPrimary { get; }
+        
+        /// <summary>
+        /// Gets the primary button (A or X) touched. 
+        /// </summary>
         public bool IsTouchedPrimary { get; }
 
         /*
-        
         // Secondary Button (B or Y)
         public string SecondaryName { get; }
         public bool IsPressedSecondary { get; }
@@ -61,7 +58,6 @@ namespace Edanoue.VR.Device.Core
         */
 
         // Thumb Stick
-        // public string StickName { get; }
         public bool IsPressedStick { get; }
         public bool IsTouchedStick { get; }
         public (float X, float Y) Stick { get; }
@@ -70,13 +66,9 @@ namespace Edanoue.VR.Device.Core
         public event Action<bool> TouchedStick;
         public event Action<bool> PressedStick;
         public event Action<float, float> ChangedStick;
-
-        /*
-        /// <summary>
-        /// Get battery
-        /// Return value is [0.0, 1.0] range (1 means Full) 
-        /// </summary>
-        public float Battery { get; }
-        */
+        
+        // Thumb Rest
+        public bool IsTouchedThumbRest { get; }
+        
     }
 }

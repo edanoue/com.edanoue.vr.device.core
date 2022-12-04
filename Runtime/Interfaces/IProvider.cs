@@ -1,5 +1,8 @@
 namespace Edanoue.VR.Device.Core
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IProvider
     {
         /// <summary>

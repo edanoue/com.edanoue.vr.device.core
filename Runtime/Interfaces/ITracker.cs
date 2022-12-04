@@ -20,6 +20,7 @@ namespace Edanoue.VR.Device.Core
         /// </summary>
         public (float W, float X, float Y, float Z) Rotation { get; }
 
+
         /// <summary>
         ///     Invoke when established connection with device.
         /// </summary>
@@ -29,14 +30,5 @@ namespace Edanoue.VR.Device.Core
         ///     Invoke when lost connection with device.
         /// </summary>
         public event Action LostConnection;
-
-
-        /// <summary>
-        /// </summary>
-        public event Action<float, float, float> ChangedPosition;
-
-        /// <summary>
-        /// </summary>
-        public event Action<float, float, float, float> ChangedRotation;
     }
 }
