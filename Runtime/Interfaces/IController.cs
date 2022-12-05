@@ -5,41 +5,51 @@ namespace Edanoue.VR.Device.Core
     public interface IController : ITracker
     {
         /// <summary>
-        /// Gets left or right. 
+        ///     Gets left or right controller.
         /// </summary>
         public ControllerDomain Domain { get; }
 
         /// <summary>
-        /// Gets the primary button (A or X) pressed.
+        ///     Gets the primary button (A or X) pressed.
         /// </summary>
         public bool IsPressedPrimary { get; }
-        
+
         /// <summary>
-        /// Gets the primary button (A or X) touched. 
+        ///     Gets the primary button (A or X) touched.
         /// </summary>
         public bool IsTouchedPrimary { get; }
 
-        /*
-        // Secondary Button (B or Y)
-        public string SecondaryName { get; }
+        /// <summary>
+        ///     Gets the secondary button (B or Y) pressed.
+        /// </summary>
         public bool IsPressedSecondary { get; }
+
+        /// <summary>
+        ///     Gets the secondary button (B or Y) touched.
+        /// </summary>
         public bool IsTouchedSecondary { get; }
-        public event Action<bool> PressedSecondary;
-        public event Action<bool> TouchedSecondary;
-        
-        // Trigger
-        public string TriggerName { get; }
+
+        /// <summary>
+        ///     Gets the trigger touched.
+        /// </summary>
         public bool IsTouchedTrigger { get; }
+
+        /// <summary>
+        ///     Gets the trigger value. (range: [0.0, 1.0])
+        /// </summary>
         public float Trigger { get; }
-        public event Action<bool> TouchedTrigger;
-        public event Action<float> UpdatedTrigger;
-        
-        // Grip
-        public string GripName { get; }
+
+        /// <summary>
+        ///     Gets the grip touched.
+        /// </summary>
         public bool IsTouchedGrip { get; }
+
+        /// <summary>
+        ///     Gets the grip value. (range: [0.0, 1.0])
+        /// </summary>
         public float Grip { get; }
-        public event Action<bool> TouchedGrip;
-        public event Action<float> UpdatedGrip;
+
+        /*
         
         // Menu Button
         public string MenuName { get; }
@@ -54,21 +64,83 @@ namespace Edanoue.VR.Device.Core
         public bool IsTouchedSystem { get; }
         public event Action<bool> PressedSystem;
         public event Action<bool> TouchedSystem;
-        
         */
 
-        // Thumb Stick
+        /// <summary>
+        ///     Gets the stick pressed.
+        /// </summary>
         public bool IsPressedStick { get; }
+
+        /// <summary>
+        ///     Gets the stick touched.
+        /// </summary>
         public bool IsTouchedStick { get; }
+
+        /// <summary>
+        ///     Gets the stick X, Y value.
+        /// </summary>
         public (float X, float Y) Stick { get; }
-        public event Action<bool> PressedPrimary;
-        public event Action<bool> TouchedPrimary;
-        public event Action<bool> TouchedStick;
-        public event Action<bool> PressedStick;
-        public event Action<float, float> ChangedStick;
-        
-        // Thumb Rest
+
+        /// <summary>
+        ///     Gets the thumb rest touched.
+        ///     Supported Devices:
+        ///     - Oculus Touch Controller
+        /// </summary>
         public bool IsTouchedThumbRest { get; }
-        
+
+        /// <summary>
+        ///     Invoke when press or release primary button.
+        /// </summary>
+        public event Action<bool> PressedPrimary;
+
+        /// <summary>
+        ///     Invoke when touch or release primary button.
+        /// </summary>
+        public event Action<bool> TouchedPrimary;
+
+        /// <summary>
+        ///     Invoke when press or release secondary button.
+        /// </summary>
+        public event Action<bool> PressedSecondary;
+
+        /// <summary>
+        ///     Invoke when touch or release secondary button.
+        /// </summary>
+        public event Action<bool> TouchedSecondary;
+
+        /// <summary>
+        ///     Invoke when touch or release trigger.
+        /// </summary>
+        public event Action<bool> TouchedTrigger;
+
+        /// <summary>
+        ///     Invoke when changed trigger value.
+        /// </summary>
+        public event Action<float> UpdatedTrigger;
+
+        /// <summary>
+        ///     Invoke when touch or release grip.
+        /// </summary>
+        public event Action<bool> TouchedGrip;
+
+        /// <summary>
+        ///     Invoke when changed grip value.
+        /// </summary>
+        public event Action<float> UpdatedGrip;
+
+        /// <summary>
+        ///     Invoke when touch or release stick.
+        /// </summary>
+        public event Action<bool> TouchedStick;
+
+        /// <summary>
+        ///     Invoke when press or release stick.
+        /// </summary>
+        public event Action<bool> PressedStick;
+
+        /// <summary>
+        ///     Invoke when changed stick value.
+        /// </summary>
+        public event Action<float, float> ChangedStick;
     }
 }
