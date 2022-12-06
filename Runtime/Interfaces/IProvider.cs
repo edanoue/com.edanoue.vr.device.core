@@ -19,5 +19,15 @@ namespace Edanoue.VR.Device.Core
         ///     Get right controller.
         /// </summary>
         public IController RightController { get; }
+        
+        /// <summary>
+        /// Get display available refresh rate list
+        /// </summary>
+        public float[] AvailableRefreshRates { get; }
+
+        /// <summary>
+        /// Get or set display refresh rate
+        /// </summary>
+        public float RefreshRate { get; set; }
     }
 }
