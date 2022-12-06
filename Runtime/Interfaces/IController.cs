@@ -116,7 +116,7 @@ namespace Edanoue.VR.Device.Core
         /// <summary>
         ///     Invoke when changed trigger value.
         /// </summary>
-        public event Action<float> UpdatedTrigger;
+        public event Action<float> ChangedTrigger;
 
         /// <summary>
         ///     Invoke when touch or release grip.
@@ -126,7 +126,7 @@ namespace Edanoue.VR.Device.Core
         /// <summary>
         ///     Invoke when changed grip value.
         /// </summary>
-        public event Action<float> UpdatedGrip;
+        public event Action<float> ChangedGrip;
 
         /// <summary>
         ///     Invoke when touch or release stick.
@@ -142,5 +142,10 @@ namespace Edanoue.VR.Device.Core
         ///     Invoke when changed stick value.
         /// </summary>
         public event Action<float, float> ChangedStick;
+
+        /// <summary>
+        ///     Invoke when touch or release thumb rest.
+        /// </summary>
+        public event Action<bool> TouchedThumbRest;
     }
 }
