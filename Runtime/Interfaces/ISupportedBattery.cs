@@ -1,4 +1,6 @@
-﻿namespace Edanoue.VR.Device.Core
+﻿// Copyright Edanoue, Inc. All Rights Reserved.
+
+namespace Edanoue.VR.Device.Core
 {
     /// <summary>
     ///     Through this interface, battery data can be obtained.

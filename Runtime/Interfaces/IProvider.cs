@@ -1,3 +1,5 @@
+// Copyright Edanoue, Inc. All Rights Reserved.
+
 namespace Edanoue.VR.Device.Core
 {
     /// <summary>

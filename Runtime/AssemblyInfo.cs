@@ -1,11 +1,8 @@
-// Assembly info for com.edanoue.vr.device.core
-// see: https://scrapbox.io/edanoue/AssemblyInfo.cs
-
+// Copyright Edanoue, Inc. All Rights Reserved.
 
 // -------------------------
 // Define Friend Assembries
 // -------------------------
 
 #if UNITY_EDITOR
-
 #endif
