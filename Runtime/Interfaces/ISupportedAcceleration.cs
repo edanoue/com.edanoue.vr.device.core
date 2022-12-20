@@ -1,4 +1,6 @@
-﻿namespace Edanoue.VR.Device.Core
+﻿// Copyright Edanoue, Inc. All Rights Reserved.
+
+namespace Edanoue.VR.Device.Core
 {
     /// <summary>
     ///     Through this interface, acceleration data can be obtained.
