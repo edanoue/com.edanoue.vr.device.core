@@ -15,7 +15,7 @@ namespace Edanoue.VR.Device.Core
         /// <summary>
         ///     ユーザーが現在アプリケーションに集中しているかどうかを取得.
         /// </summary>
-        public bool HasInputFocus { get; }
+        public bool HasApplicationFocus { get; }
 
         /// <summary>
         /// </summary>
@@ -33,7 +33,7 @@ namespace Edanoue.VR.Device.Core
         ///     - システムのメニューボタンを押した
         ///     - HMD のトラッキングが失われた
         /// </summary>
-        public event Action InputFocusAcquired;
+        public event Action ApplicationFocusAcquired;
 
         /// <summary>
         ///     ユーザーがアプリケーションに集中したときに呼ばれます
@@ -43,6 +43,6 @@ namespace Edanoue.VR.Device.Core
         ///     - システムのメニューボタンを閉じた
         ///     - HMD のトラッキングが戻った
         /// </summary>
-        public event Action InputFocusLost;
+        public event Action ApplicationFocusLost;
     }
 }
