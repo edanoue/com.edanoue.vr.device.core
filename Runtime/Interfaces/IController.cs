@@ -87,8 +87,14 @@ namespace Edanoue.VR.Device.Core
         ///     Gets the thumb rest touched.
         ///     Supported Devices:
         ///     - Oculus Touch Controller
+        ///     - Meta Quest Pro Controller
         /// </summary>
         public bool IsTouchedThumbRest { get; }
+
+        /// <summary>
+        ///     Gets the start button (in-game menu) pressed.
+        /// </summary>
+        public bool IsPressedStart { get; }
 
         /// <summary>
         ///     Invoke when press or release primary button.
@@ -149,5 +155,10 @@ namespace Edanoue.VR.Device.Core
         ///     Invoke when touch or release thumb rest.
         /// </summary>
         public event Action<bool> TouchedThumbRest;
+
+        /// <summary>
+        ///     Invoke when press or release start (In-Game Menu button).
+        /// </summary>
+        public event Action<bool> PressedStart;
     }
 }
