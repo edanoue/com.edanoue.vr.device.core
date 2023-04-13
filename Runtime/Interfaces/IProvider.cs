@@ -57,5 +57,11 @@ namespace Edanoue.VR.Device.Core
         /// - HMD のトラッキングが戻った
         /// </summary>
         public event Action ApplicationFocusLost;
+
+        /// <summary>
+        /// Update device
+        /// </summary>
+        /// <param name="deltaTime"></param>
+        public void Update(float deltaTime);
     }
 }
