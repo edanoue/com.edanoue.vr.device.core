@@ -7,47 +7,47 @@ namespace Edanoue.VR.Device.Core
     public interface IController : ITracker
     {
         /// <summary>
-        ///     Gets left or right controller.
+        /// Gets left or right controller.
         /// </summary>
         public ControllerDomain Domain { get; }
 
         /// <summary>
-        ///     Gets the primary button (A or X) pressed.
+        /// Gets the primary button (A or X) pressed.
         /// </summary>
         public bool IsPressedPrimary { get; }
 
         /// <summary>
-        ///     Gets the primary button (A or X) touched.
+        /// Gets the primary button (A or X) touched.
         /// </summary>
         public bool IsTouchedPrimary { get; }
 
         /// <summary>
-        ///     Gets the secondary button (B or Y) pressed.
+        /// Gets the secondary button (B or Y) pressed.
         /// </summary>
         public bool IsPressedSecondary { get; }
 
         /// <summary>
-        ///     Gets the secondary button (B or Y) touched.
+        /// Gets the secondary button (B or Y) touched.
         /// </summary>
         public bool IsTouchedSecondary { get; }
 
         /// <summary>
-        ///     Gets the trigger touched.
+        /// Gets the trigger touched.
         /// </summary>
         public bool IsTouchedTrigger { get; }
 
         /// <summary>
-        ///     Gets the trigger value. (range: [0.0, 1.0])
+        /// Gets the trigger value. (range: [0.0, 1.0])
         /// </summary>
         public float Trigger { get; }
 
         /// <summary>
-        ///     Gets the grip touched.
+        /// Gets the grip touched.
         /// </summary>
         public bool IsTouchedGrip { get; }
 
         /// <summary>
-        ///     Gets the grip value. (range: [0.0, 1.0])
+        /// Gets the grip value. (range: [0.0, 1.0])
         /// </summary>
         public float Grip { get; }
 
@@ -69,95 +69,95 @@ namespace Edanoue.VR.Device.Core
         */
 
         /// <summary>
-        ///     Gets the stick pressed.
+        /// Gets the stick pressed.
         /// </summary>
         public bool IsPressedStick { get; }
 
         /// <summary>
-        ///     Gets the stick touched.
+        /// Gets the stick touched.
         /// </summary>
         public bool IsTouchedStick { get; }
 
         /// <summary>
-        ///     Gets the stick X, Y value.
+        /// Gets the stick X, Y value.
         /// </summary>
         public (float X, float Y) Stick { get; }
 
         /// <summary>
-        ///     Gets the thumb rest touched.
-        ///     Supported Devices:
-        ///     - Oculus Touch Controller
-        ///     - Meta Quest Pro Controller
+        /// Gets the thumb rest touched.
+        /// Supported Devices:
+        /// - Oculus Touch Controller
+        /// - Meta Quest Pro Controller
         /// </summary>
         public bool IsTouchedThumbRest { get; }
 
         /// <summary>
-        ///     Gets the start button (in-game menu) pressed.
+        /// Gets the start button (in-game menu) pressed.
         /// </summary>
         public bool IsPressedStart { get; }
 
         /// <summary>
-        ///     Invoke when press or release primary button.
+        /// Invoke when press or release primary button.
         /// </summary>
         public event Action<bool> PressedPrimary;
 
         /// <summary>
-        ///     Invoke when touch or release primary button.
+        /// Invoke when touch or release primary button.
         /// </summary>
         public event Action<bool> TouchedPrimary;
 
         /// <summary>
-        ///     Invoke when press or release secondary button.
+        /// Invoke when press or release secondary button.
         /// </summary>
         public event Action<bool> PressedSecondary;
 
         /// <summary>
-        ///     Invoke when touch or release secondary button.
+        /// Invoke when touch or release secondary button.
         /// </summary>
         public event Action<bool> TouchedSecondary;
 
         /// <summary>
-        ///     Invoke when touch or release trigger.
+        /// Invoke when touch or release trigger.
         /// </summary>
         public event Action<bool> TouchedTrigger;
 
         /// <summary>
-        ///     Invoke when changed trigger value.
+        /// Invoke when changed trigger value.
         /// </summary>
         public event Action<float> ChangedTrigger;
 
         /// <summary>
-        ///     Invoke when touch or release grip.
+        /// Invoke when touch or release grip.
         /// </summary>
         public event Action<bool> TouchedGrip;
 
         /// <summary>
-        ///     Invoke when changed grip value.
+        /// Invoke when changed grip value.
         /// </summary>
         public event Action<float> ChangedGrip;
 
         /// <summary>
-        ///     Invoke when touch or release stick.
+        /// Invoke when touch or release stick.
         /// </summary>
         public event Action<bool> TouchedStick;
 
         /// <summary>
-        ///     Invoke when press or release stick.
+        /// Invoke when press or release stick.
         /// </summary>
         public event Action<bool> PressedStick;
 
         /// <summary>
-        ///     Invoke when changed stick value.
+        /// Invoke when changed stick value.
         /// </summary>
         public event Action<float, float> ChangedStick;
 
         /// <summary>
-        ///     Invoke when touch or release thumb rest.
+        /// Invoke when touch or release thumb rest.
         /// </summary>
         public event Action<bool> TouchedThumbRest;
 
         /// <summary>
-        ///     Invoke when press or release start (In-Game Menu button).
+        /// Invoke when press or release start (In-Game Menu button).
         /// </summary>
         public event Action<bool> PressedStart;
     }

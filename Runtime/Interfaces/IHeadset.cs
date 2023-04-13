@@ -7,8 +7,8 @@ namespace Edanoue.VR.Device.Core
     public interface IHeadset : ITracker
     {
         /// <summary>
-        ///     Gets headset currently mounted.
-        ///     ヘッドセットを今かぶっているかどうかを取得.
+        /// Gets headset currently mounted.
+        /// ヘッドセットを今かぶっているかどうかを取得.
         /// </summary>
         public bool IsMounted { get; }
 
