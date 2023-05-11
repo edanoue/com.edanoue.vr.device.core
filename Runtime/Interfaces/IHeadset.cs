@@ -31,6 +31,15 @@ namespace Edanoue.VR.Device.Core
         public abstract void ResetColorOffset();
     }
 
+    public enum FoveatedRenderingLevel
+    {
+        Off     = 0,
+        Low     = 1,
+        Medium  = 2,
+        High    = 3,
+        HighTop = 4
+    }
+
     public interface IHeadset : ITracker
     {
         /// <summary>
@@ -40,6 +49,11 @@ namespace Edanoue.VR.Device.Core
         public bool IsMounted { get; }
 
         public HeadsetDisplayColorHandler DisplayColor { get; }
+
+        /// <summary>
+        /// Gets or sets the tiled-based multi-resolution (fixed) foveated rendering level.
+        /// </summary>
+        public FoveatedRenderingLevel FoveatedRenderingLevel { get; set; }
 
         /// <summary>
         /// </summary>
