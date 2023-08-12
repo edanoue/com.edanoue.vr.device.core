@@ -1,11 +1,27 @@
 // Copyright Edanoue, Inc. All Rights Reserved.
 
 using System;
+// ReSharper disable InconsistentNaming
 
 namespace Edanoue.VR.Device.Core
 {
+    public enum ControllerDeviceType
+    {
+        // Meta
+        META_QUEST_TOUCH  = 100,
+        META_QUEST_PRO_TOUCH,
+        
+        // Pico
+        PICO_4 = 200,
+    }
+    
     public interface IController : ITracker
     {
+        /// <summary>
+        /// Gets controller device type.
+        /// </summary>
+        public ControllerDeviceType DeviceType { get; }
+        
         /// <summary>
         /// Gets left or right controller.
         /// </summary>
