@@ -54,6 +54,11 @@ namespace Edanoue.VR.Device.Core
         /// Gets or sets the tiled-based multi-resolution (fixed) foveated rendering level.
         /// </summary>
         public FoveatedRenderingLevel FoveatedRenderingLevel { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the use dynamic foveated rendering.
+        /// </summary>
+        public bool UseDynamicFoveatedRendering { get; set; }
 
         /// <summary>
         /// </summary>
